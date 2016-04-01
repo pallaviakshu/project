@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad1 {
+    height: 200px;
+    background: -webkit-repeating-linear-gradient(red, yellow 30%, green 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-linear-gradient(red, yellow 30%, green 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-repeating-linear-gradient(red, yellow 30%, green 50%); /* For Firefox 3.6 to 15 */
+    background: repeating-linear-gradient(red, yellow 30%, green 50%); /* Standard syntax (must be last) */
+}
+
+#grad2 {
+    height: 200px;
+    background: -webkit-repeating-linear-gradient(45deg,red,yellow 7%,green 10%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-linear-gradient(45deg,red,yellow 7%,green 10%); /* For Opera 11.1 to 12.0 */
+    background: -moz-repeating-linear-gradient(45deg,red,yellow 7%,green 10%); /* For Firefox 3.6 to 15 */
+    background: repeating-linear-gradient(45deg,red,yellow 7%,green 10%); /* Standard syntax (must be last) */
+}
+
+#grad3 {
+    height: 200px;
+    background: -webkit-repeating-linear-gradient(190deg,red,yellow 7%,green 10%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-linear-gradient(190deg,red,yellow 7%,green 10%); /* For Opera 11.1 to 12.0 */
+    background: -moz-repeating-linear-gradient(190deg,red,yellow 7%,green 10%); /* For Firefox 3.6 to 15 */
+    background: repeating-linear-gradient(190deg,red,yellow 7%,green 10%); /* Standard syntax (must be last) */
+}
+
+#grad4 {
+    height: 200px;
+    background: -webkit-repeating-linear-gradient(90deg,red,yellow 7%,green 10%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-linear-gradient(); /* For Opera 11.1 to 12.0 */
+    background: -moz-repeating-linear-gradient(90deg,red,yellow 7%,green 10%); /* For Firefox 3.6 to 15 */
+    background: repeating-linear-gradient(90deg,red,yellow 7%,green 10%); /* Standard syntax (must be last) */
+}
+</style>
+</head>
+<body>
+
+<h3>Repeating Linear Gradient</h3>
+
+<div id="grad1"></div>
+
+<p>A repeating gradient on 45deg axe starting red and finishing green:</p>
+<div id="grad2"></div>
+
+<p>A repeating gradient on 190deg axe starting red and finishing green:</p>
+<div id="grad3"></div>
+
+<p>A repeating gradient on 90deg axe starting red and finishing green:</p>
+<div id="grad4"></div>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support gradients.</p>
+
+</body>
+</html>
+
