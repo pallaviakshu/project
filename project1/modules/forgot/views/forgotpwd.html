@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<div ng-controller="forgotFormController">
+<div class="container w-xl w-auto-xs" ng-init="app.settings.container = false;">
+  <a href class="navbar-brand block m-t">{{app.name}}</a>
+  <div class="m-b-lg">
+    <div class="wrapper text-center">
+      <strong>Input your email to reset your password</strong>
+    </div>
+    <form name="reset" ng-init="isCollapsed=true" novalidate>
+       <div class="text-danger wrapper text-center" ng-show="authError">
+              <p><strong>{{authError}}</strong>.</p>
+          </div>
+      <div class="list-group list-group-sm">
+        <div class="list-group-item">
+          <input type="email" placeholder="Email" ng-model="user.email" class="form-control no-border" required>
+          </div>
+      </div>
+
+      
+        <div class="list-group list-group-sm" ng-if="otphide">
+        <div class="list-group-item">
+      
+          <input id="otp" type="text" placeholder="Verification Code" ng-model="otp" ng-change="textChanged()" class="form-control no-border" required ng-Trim="false" >
+        
+        </div>
+      </div>
+
+      
+      <button id="send" type="submit" novalidate class="btn btn-lg btn-primary btn-block"  ng-click="forgotpwd()" >Send</button>
+     
+          
+    </form>
+    <div collapse="isCollapsed" class="m-t">
+      <div class="alert alert-success">
+        <p>A reset link sent to your email address, please check it in 7 days. <a ui-sref="login" class="btn btn-sm btn-success" ng-click="form.$valid && login()">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" ng-include="'common/page_footer.html'">
+    {% include 'common/page_footer.html' %}
+  </div>
+</div>
+</div>
+</body>
+</html>

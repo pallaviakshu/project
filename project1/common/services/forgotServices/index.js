@@ -1,0 +1,1 @@
+angular.module('forgotpwd.services',['forgotpwd.service']);
